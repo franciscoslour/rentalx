@@ -1,5 +1,6 @@
 
 import { CategoryRepository } from "../repositories/CategoryRepository";
+import { ICategoryRepository } from "../repositories/ICategoryRepository";
 
 interface IResquest {
   name: string;
@@ -8,7 +9,7 @@ interface IResquest {
 
 class CreateCategoryService {
 
-  constructor(private categoryRepository: CategoryRepository) { }
+  constructor(private categoryRepository: ICategoryRepository) { }
 
   execute({ name, description }: IResquest): void {
     const category = this.categoryRepository.findByName(name);
