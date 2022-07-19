@@ -22,12 +22,12 @@ class CategoryRepository {
     this.categories.push(category);
   }
 
-  list(): Category[]{
+  list(): Category[] {
     const categories = this.categories;
     return categories;
   }
 
-  findByName(name:string): Category{
+  findByName(name: string): Category {
     const category = this.categories.find((category) => category.name === name);
     return category;
   }
