@@ -8,6 +8,7 @@ class SpecificationRepository implements ISpecificationRepository {
   constructor() {
     this.specifications = []
   }
+ 
   
   create({ name, description }: ISpecificationDTO): void {
     const specification = new Specification();
@@ -22,6 +23,10 @@ class SpecificationRepository implements ISpecificationRepository {
     const specification  = this.specifications.find(specification => specification.name === name)
     return specification;
   } 
+
+  list(): Specification[] {
+    return this.specifications;
+  }
 
 }
 

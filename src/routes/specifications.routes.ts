@@ -12,4 +12,10 @@ specificationRoutes.post("/", (request, response) => {
   return response.status(201).send();
 });
 
+
+specificationRoutes.get("/", (request, response) => {
+  const specifications = specificationRepository.list();
+  return response.json(specifications);
+})
+
 export { specificationRoutes }
