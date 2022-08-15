@@ -14,7 +14,7 @@ export class CreateCategories1660221820858 implements MigrationInterface {
                 isPrimary:true
               },
               {
-                name:"nome",
+                name:"name",
                 type:"varchar"
               },
               {
