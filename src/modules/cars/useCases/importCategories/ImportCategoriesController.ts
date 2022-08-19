@@ -10,7 +10,7 @@ class ImportCategoriesController {
     const { file } = request;
     const importCategoriesUserCase = container.resolve(ImportCategoriesUseCase);
     await importCategoriesUserCase.execute(file);
-    return response.send();
+    return response.status(201).send();
   }
 
 }
