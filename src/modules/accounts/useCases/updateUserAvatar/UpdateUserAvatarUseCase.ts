@@ -21,9 +21,6 @@ class UpdateUserAvatarUseCase {
     const user = await this.userRepository.findById(user_id);
     user.avatar =  avatar_file;
     await this.userRepository.create(user);
-
-
-
   }
 
 }
